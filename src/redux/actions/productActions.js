@@ -1,15 +1,15 @@
-import { SELECTED_PRODUCT, SET_PRODUCTS } from "../contants/actionTypes"
+import { ActionTypes } from "../contants/actionTypes"
 
 export const setProducts=(products)=>{
 return{
-    type:SET_PRODUCTS,
+    type:ActionTypes.SET_PRODUCTS,
     payload: products
 }
 }
 
 export const selectedProducts=(product)=>{
     return{
-        type:SELECTED_PRODUCT,
+        type:ActionTypes.SELECTED_PRODUCT,
         payload: product
     }
     } 
