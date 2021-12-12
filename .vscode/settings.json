@@ -7,6 +7,7 @@
     "editor.fontLigatures": true,
     "editor.wordWrap": "on",
     "editor.formatOnSave": true,
+    "editor.hover.enabled": false,
     "[javascript]": {
       "editor.formatOnSave": false,
       "editor.defaultFormatter": null 
