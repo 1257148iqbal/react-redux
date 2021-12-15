@@ -1,19 +1,29 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import './App.css';
-import Header from './containers/Header';
-import ProductDetails from './containers/ProductDetails';
-import ProductListing from './containers/ProductListing';
+import AddContact from "./component/AddContact";
+import EditContact from "./component/EditContact";
+import Home from "./component/Home";
+import Navbar from "./component/Navbar";
 
 
 
-function App() {
+const App=()=> {
   return (
     <div className="App"> 
-    <Header/>
-    <Routes>           
-          <Route path="/" element={<ProductListing/>}/>
-          <Route path="/product/:productId" element={<ProductDetails/>}/>           
-      </Routes>       
+    <ToastContainer/>
+    {/* <Header/>  */}
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+
+      <Route path="/add" element={<AddContact/>} />
+
+      <Route path="/edit/:id" element={<EditContact/>} />
+
+          {/* <Route path="/" element={<ProductListing/>}/>
+          <Route path="/product/:productId" element={<ProductDetails/>}/>*/}
+      </Routes>
     </div>  
   ); 
 }
